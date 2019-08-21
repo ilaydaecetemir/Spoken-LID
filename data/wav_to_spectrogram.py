@@ -72,7 +72,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     #changed
     #parser.add_argument('--shape', dest='shape', default=[129, 500, 1], type=int, nargs=3)
-    parser.add_argument('--shape', dest='shape', default=[129, 200, 1], type=int, nargs=3)
+    parser.add_argument('--shape', dest='shape', default=[129, 300, 1], type=int, nargs=3)
     #parser.add_argument('--shape', dest='shape', default=[129, 500, 1], type=int, nargs=3)
     #parser.add_argument('--shape', dest='shape', default=[129, 100, 1], type=int, nargs=3)
     parser.add_argument('--pixel', dest='pixel_per_second', default=100, type=int)
