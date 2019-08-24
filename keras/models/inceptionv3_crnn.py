@@ -33,7 +33,7 @@ def create_model(input_shape, config):
     _x, _y, _c = [int(s) for s in x._shape[1:]]
     x = Reshape((_x, _y*_c))(x)
     #x = Bidirectional(LSTM(512, return_sequences=False), merge_mode="concat")(x)
-    x = Bidirectional(LSTM(512, return_sequences=False), merge_mode="concat")(x)
+    x = Bidirectional(LSTM(256, return_sequences=False), merge_mode="concat")(x)
 
     predictions = Dense(config["num_classes"], activation='softmax')(x)
 
