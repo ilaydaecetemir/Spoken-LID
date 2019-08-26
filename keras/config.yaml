@@ -30,6 +30,7 @@ pixel_per_second: 50
 label_names: ["NL", "EN"]
 num_classes: 2
 
+#sırf laf
 #label_names: ["EN", "DE", "FR", "ES", "CN", "RUS"]
 #num_classes: 6
 
