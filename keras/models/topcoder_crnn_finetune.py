@@ -31,9 +31,9 @@ def create_model(input_shape, config):
     model.add(BatchNormalization())
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 1)))
 
-    #model.add(Convolution2D(256, 3, 3, W_regularizer=l2(weight_decay), activation="relu"))
-    #model.add(BatchNormalization())
-    #model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 1)))
+    model.add(Convolution2D(256, 3, 3, W_regularizer=l2(weight_decay), activation="relu"))
+    model.add(BatchNormalization())
+    model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 1)))
 
     #model.load_weights("logs/2017-04-08-13-03-44/weights.08.model", by_name=True)
     # for ref_layer in ref_model.layers:
@@ -51,7 +51,7 @@ def create_model(input_shape, config):
     bs, x, y, c = model.layers[-1].output_shape
     model.add(Reshape((x, y*c)))
 
-    model.add(Bidirectional(LSTM(256, return_sequences=False), merge_mode="concat"))
+    model.add(Bidirectional(LSTM(512, return_sequences=False), merge_mode="concat"))
     model.add(Dense(config["num_classes"], activation="softmax"))
 
     return model
