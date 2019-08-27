@@ -1,9 +1,9 @@
 #train_data_dir: "/mnt/d/Documents/VU/thesis/crnn-lid-master/data/vox3s100ps/training.csv"
 #validation_data_dir: "/mnt/d/Documents/VU/thesis/crnn-lid-master/data/vox3s100ps/validation.csv"
 #test_data_dir: "/mnt/d/Documents/VU/thesis/crnn-lid-master/data/vox3s100ps/testing.csv"
-train_data_dir: "/home/ilaydaecetemir/python/firaticokseviyorum/data/3s100ps/training.csv"
-validation_data_dir: "/home/ilaydaecetemir/python/firaticokseviyorum/data/3s100ps/validation.csv"
-test_data_dir: "/home/ilaydaecetemir/python/firaticokseviyorum/data/3s100ps/testing.csv"
+train_data_dir: "/home/ilaydaecetemir/2s100ps-cloud/training.csv"
+validation_data_dir: "/home/ilaydaecetemir/2s100ps-cloud/validation.csv"
+test_data_dir: "/home/ilaydaecetemir/2s100ps-cloud/testing.csv"
 
 #batch_size: 128
 batch_size: 64
@@ -18,13 +18,13 @@ color_mode: "L"  # L = bw or RGB
 input_shape: [129, 300, 1]
 
 #model: "inceptionv3_crnn" # _finetune"
-#model: "topcoder_crnn_finetune"
-model: "topcoder_5s_finetune"
+model: "topcoder_crnn_finetune"
+#model: "topcoder_5s_finetune"
 
 
 #segment_length: 10  # number of seconds each spectogram represents   
 #segment_length: 2
-segment_length : 3
+segment_length : 2
 pixel_per_second: 100
 
 label_names: ["NL", "EN"]
