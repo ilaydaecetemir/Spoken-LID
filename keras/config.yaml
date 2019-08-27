@@ -15,22 +15,21 @@ data_loader: "ImageLoader"
 color_mode: "L"  # L = bw or RGB
 #input_shape: [129, 500, 1]
 #input_shape: [129, 100, 1]
-input_shape: [129, 150, 1]
+input_shape: [129, 300, 1]
 
-model: "inceptionv3_crnn" # _finetune"
-#model: "topcoder_crnn_finetune"
+#model: "inceptionv3_crnn" # _finetune"
+model: "topcoder_crnn_finetune"
 #model: "topcoder_5s_finetune"
 
 
 #segment_length: 10  # number of seconds each spectogram represents   
 #segment_length: 2
 segment_length : 3
-pixel_per_second: 50
+pixel_per_second: 100
 
 label_names: ["NL", "EN"]
 num_classes: 2
 
-#sırf laf
 #label_names: ["EN", "DE", "FR", "ES", "CN", "RUS"]
 #num_classes: 6
 
